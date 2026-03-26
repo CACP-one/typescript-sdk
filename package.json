@@ -1,0 +1,76 @@
+{
+  "name": "@cacp/sdk",
+  "version": "0.1.0",
+  "description": "Official TypeScript/JavaScript SDK for CACP - Cross-Agent Communication Protocol",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "messaging",
+    "rpc",
+    "broker",
+    "cacp",
+    "langchain",
+    "autogen",
+    "crewai"
+  ],
+  "author": "CACP Team <support@cacp.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cacp/cacp",
+    "directory": "sdks/typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/cacp/cacp/issues"
+  },
+  "homepage": "https://cacp.io",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "eventsource": "^2.0.2",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2",
+    "vitest": "^1.0.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.7.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  }
+}

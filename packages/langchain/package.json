@@ -1,0 +1,54 @@
+{
+  "name": "@cacp/langchain",
+  "version": "0.1.0",
+  "description": "LangChain.js integration for CACP (Cross-Agent Communication Protocol)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "langchain",
+    "cacp",
+    "ai",
+    "agents",
+    "llm"
+  ],
+  "author": "CACP Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anomalyco/cacp"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.1.0",
+    "@cacp/sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.0.0"
+  },
+  "peerDependencies": {
+    "@langchain/core": "^0.1.0",
+    "@cacp/sdk": "^0.1.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
